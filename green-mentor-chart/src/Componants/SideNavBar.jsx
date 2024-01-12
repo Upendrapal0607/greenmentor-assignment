@@ -19,9 +19,8 @@ export const SideNavBar = () => {
         </div>
         <div>
           <img src={energy_program} alt="" />
-          {/* <p>Energy</p> */}
           <select className="enery-select" name="" id="">
-            <option value="">Category-1</option>
+            <option value="">Energy</option>
             <option value="">Category-2</option>
             <option value="">Category-3</option>
             <option value="">Category-4</option>
@@ -70,7 +69,7 @@ const DIV = styled.div`
     gap: 5px;
   }
   .other-content {
-    width: 85%;
+    width: 80%;
     display: flex;
     padding: 10px 15px 15px 15px;
     flex-direction: column;
@@ -83,7 +82,6 @@ const DIV = styled.div`
   }
   .other-content > div {
     width: 100%;
-    border: 0px solid red;
     display: flex;
     padding: 13px 10px 13px 20px;
     align-items: center;
@@ -103,7 +101,7 @@ const DIV = styled.div`
   }
 
   .energy-box {
-    width: 85%;
+    width: 80%;
     padding: 10px 15px 16px 15px;
     display: flex;
     flex-direction: column;

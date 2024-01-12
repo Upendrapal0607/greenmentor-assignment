@@ -2,14 +2,20 @@ import "./App.css";
 import styled from "styled-components";
 import { SideNavBar } from "./Componants/SideNavBar";
 import { Main } from "./Componants/Main";
+import { Icon, useDisclosure } from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import { SideNaveBarDrawer } from "./Componants/SideNavDrawer";
 function App() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div className="App">
       <DIV>
-        <div className="burger">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"
-            alt="bg"
+        <div className="burger" onClick={onOpen}>
+          <Icon as={HamburgerIcon} />
+          <SideNaveBarDrawer
+            isOpen={isOpen}
+            onClose={onClose}
+            onOpen={onOpen}
           />
         </div>
         <div className="side-nav">
@@ -31,10 +37,7 @@ const DIV = styled.div`
     width: 0%;
     visibility: hidden;
   }
-  .burger>img{
-width: 20px;
-height: 20px;
-  }
+
   .side-nav {
     width: 17%;
     display: inline-flex;
@@ -56,9 +59,14 @@ height: 20px;
       width: 97%;
     }
     .burger {
-      width: 3%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      /* border: 2px solid red; */
+      height: 20px;
       visibility: visible;
-   
+      margin-top: 20px;
     }
     .burger > img {
       cursor: pointer;

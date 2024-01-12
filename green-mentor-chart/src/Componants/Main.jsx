@@ -174,8 +174,8 @@ export const Main = () => {
             <img src={vectorIcon} alt="icon" />
           </div>
 
-          <div className="button-box-1">
-            <h3>399699 Co2</h3>
+          <div className="button-box-1 four-cord-boxes">
+            <p>399699 Co2</p>
             <p>6.7% YOY!</p>
           </div>
         </div>
@@ -185,8 +185,8 @@ export const Main = () => {
             <img src={vectorIcon} alt="icon" />
           </div>
 
-          <div className="button-box-2">
-            <h3>136.0</h3>
+          <div className="button-box-2 four-cord-boxes">
+            <p>136.0</p>
             <p>3.7% YOY!</p>
           </div>
         </div>
@@ -196,13 +196,14 @@ export const Main = () => {
             <img src={vectorIcon} alt="icon" />
           </div>
 
-          <div className="button-box-3">
+          <div className="button-box-3 four-cord-boxes">
             <h2>32% of Scope3</h2>
           </div>
         </div>
-        <div>
-          <p className="number-supplier">Total number of reached suppliers</p>
-          <h1>148</h1>
+        <div className="supplier-number">
+          <p className="number-supplier-147">Total number of reached suppliers</p>
+          <p className="number-supplier-148">148</p>
+         
         </div>
       </div>
       <BarChart chartData={AllRevenue} />
@@ -264,7 +265,6 @@ const DIV = styled.div`
     justify-content: flex-end;
     align-items: center;
     flex-shrink: 0;
-    border: 0px solid red;
   }
 
   .select-date > select {
@@ -281,7 +281,6 @@ const DIV = styled.div`
   }
   .four-cord {
     width: 92%;
-    border: 0px solid green;
 
     padding: 20px 20px;
     display: flex;
@@ -292,6 +291,7 @@ const DIV = styled.div`
   }
   .four-cord > div {
     display: flex;
+    height: 120px;
     flex-direction: column;
     justify-content: space-around;
     padding: 0px 0px 0px 20px;
@@ -301,19 +301,22 @@ const DIV = styled.div`
     border-radius: 12px;
     box-shadow: rgba(17, 17, 20, 0.1) 0px 0px 16px;
   }
-  .four-cord > div:nth-child(4) {
+  .four-cord > div:nth-child(4){
     display: flex;
+    height: 120px;
     flex-direction: column; 
     width: 18%;
+
+    padding: 0px;
     border: 1px solid #ebebeb;
     color: #fff;
-    padding: 0px;
     background: rgba(2, 171, 108, 0.67);
     box-shadow: rgba(17, 17, 20, 0.1) 0px 0px 16px;
     align-items: center;
   }
-  h1{
-    margin-top: -10px;
+  .number-supplier-148{
+    margin-top: -12px;
+    font-size: 20px;
   }
   .all-icon {
     display: flex;
@@ -330,16 +333,14 @@ const DIV = styled.div`
     width: 14px;
     height: 14px;
   }
-  .button-box-1,
-  .button-box-2,
-  .button-box-3 {
+  .four-cord-boxes{
     width: 80%;
     align-items: center;
     justify-content: space-between;
     border-radius: 8px;
     display: flex;
     border: 2px solid #eeedea;
-    /* padding: 14px 12px 12px 15px; */
+    padding: 14px 12px 12px 15px;
     align-items: center;
     align-self: stretch;
   }
@@ -365,24 +366,6 @@ const DIV = styled.div`
   }
   h2 {
     font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  .number-suplier {
-    color: #fff;
-    font-family: HelveticaNeue;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-  }
-  h1 {
-    color: rgba(255, 255, 255, 0.84);
-
-    text-align: center;
-    font-family: HelveticaNeue;
-    font-size: 46px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
